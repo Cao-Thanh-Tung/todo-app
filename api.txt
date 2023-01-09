@@ -1,0 +1,161 @@
+1, Thay đổi thông tin cá nhân.
+request info = {
+fullname,
+email,
+avatar,
+new_password,
+password,
+accessToken,
+},
+
+response new_info = status(200){
+user_id,
+fullname,
+avatar,
+accessToken,
+}
+
+2, Lấy thông tin cá nhân.
+request key = {accessToken}
+
+response info = status(200){
+user_id,
+fullname,
+avatar,
+}
+
+3, tạo project.
+request project_info = {
+project_name,
+project_description,
+accesToken,
+}
+
+response status
+
+
+4, Get project info.
+request project_info = {
+project_id,
+accessToken,
+}
+
+response project_info = {
+project_id,
+project_name,
+project_description,
+project_status,
+project_owner,
+group_id
+}
+
+5, Delete project.
+request {
+project_id,
+accessToken,
+}
+
+response status
+
+6, Update Project Status.
+request {
+project_id,
+newStatus,
+accessToken,
+}
+
+response status
+
+7, Get list project.
+request {
+accessToken,
+}
+
+reponse [{project_id, project_name}]
+
+-------------------------
+
+8, Create mission.
+request mission_info = {
+mission_title,
+mission_description,
+project_id,
+accessToken,
+}
+
+response status
+
+9, Delete mission.
+request {
+mission_id,
+accessToken,
+}
+
+response status
+10, get mission.
+request {
+mission_id,
+accessToken,
+}
+
+response mission = {
+mission_id,
+mission_tittle,
+mission_description,
+mission_status,
+}
+
+11, update mission status.
+request {
+mission_id,
+newStatus,
+accessToken,
+}
+
+return status
+
+12, get list mission.
+request {
+project_id,
+accessToken,
+}
+
+response [{mission_title, mission_id, mission_status}]
+-------------------------
+
+
+
+13, Create message.
+request message = {
+receive_id
+id_info,
+type,
+content,
+accessToken,
+}
+
+return status
+
+14, Delete message.
+request {
+message_id,
+accessToken,
+}
+
+response status
+
+15, Update message status.
+request {
+message_id,
+accessToken,
+newStatus,
+}
+
+response status
+
+16, get list message.
+request {
+accessToken,
+}
+
+response [message]

@@ -1,0 +1,10 @@
+const rootRouter = require("express").Router();
+const userRouter = require("./user");
+const projectRouter = require("./project");
+const missionRouter = require("./mission");
+const messageRouter = require("./message");
+rootRouter.use("/user", userRouter);
+rootRouter.use("/project", projectRouter);
+rootRouter.use("/mission", missionRouter);
+rootRouter.use("/message", messageRouter);
+module.exports = rootRouter;
